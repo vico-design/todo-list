@@ -1,0 +1,108 @@
+body {
+  background-color: #d0b8ac;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+h1 {
+  font-size: 40px;
+  color: #ac988e;
+}
+
+#container {
+  padding: 0 60px;
+  background-color: #f3d8c7;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media screen and (min-width: 769px) {
+  #container {
+    padding: 0 15vw;
+  }
+}
+
+#header {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+
+#header button {
+  height: 30px;
+  width: 70px;
+  font-size: 18px;
+}
+
+#save {
+  display: none;
+}
+
+progress {
+  width: 380px;
+  height: 20px;
+}
+
+#subtitle {
+  display: flex;
+  align-items: baseline;
+  color: #ac988e;
+}
+#delete {
+  height: 25px;
+  width: 60px;
+  font-size: 14px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  text-transform: capitalize;
+  color: #886f68;
+}
+
+ul li .checkbox {
+  margin-right: 10px;
+}
+
+ul li label.completed {
+  color: grey;
+  text-decoration: line-through;
+}
+
+ul li .trashButton {
+  text-decoration: none;
+  visibility: hidden;
+}
+ul li:hover .trashButton {
+  visibility: visible;
+}
+#footer {
+  margin-top: 20px;
+}
+
+#add {
+  border-color: #886f68;
+  height: 25px;
+  width: 55px;
+  font-size: 14px;
+}
+
+#text {
+  background-color: snow;
+}
+
+.button {
+  background-color: #efe5dc;
+  margin-left: 10px;
+  color: #d0b8ac;
+  border-radius: 14px;
+  border: 15px;
+  cursor: pointer;
+}

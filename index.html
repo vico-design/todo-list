@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ToDo</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="container">
+      <div id="header">
+        <h1 id="title">To Do List 21 May</h1>
+        <button id="edit" class="button editsave" type="button">
+          Edit
+        </button>
+        <button id="save" class="button" type="button">
+          Save
+        </button>
+      </div>
+      <div>
+        <progress id="progress-bar"></progress>
+        <div id="subtitle">
+          <h2>To Do</h2>
+          <button id="delete" class="button" type="button">Delete</button>
+        </div>
+        <div>
+          <ul id="list">
+            <li>
+              <input class="checkbox" type="checkbox" />
+              <label> Empezar el práctico ToDo </label>
+              <a href="#" class="trashButton">🗑</a>
+            </li>
+            <li>
+              <input class="checkbox" type="checkbox" />
+              <label> Tomar 2 litros de agua </label>
+              <a href="#" class="trashButton">🗑</a>
+            </li>
+            <li>
+              <input class="checkbox" type="checkbox" />
+              <label>Estudiar aleman</label>
+              <a href="#" class="trashButton">🗑</a>
+            </li>
+            <li>
+              <input class="checkbox" type="checkbox" />
+              <label> Hacer ejercicio</label>
+              <a href="#" class="trashButton">🗑</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div id="footer">
+        <input id="text" type="text" placeholder="New Task" />
+        <button id="add" class="button" type="button">
+          Add
+        </button>
+      </div>
+    </div>
+    <script type="module" src="./modules/index.js"></script>
+  </body>
+</html>
