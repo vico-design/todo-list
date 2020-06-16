@@ -14,7 +14,7 @@ buttonAdd.onclick = addTask;
 function addTask() {
   const inputValue = document.getElementById("text").value;
   if (inputValue === "") {
-    alert("Escribi algo culiau");
+    alert("Please insert a text");
   } else {
     const li = document.createElement("li");
 
