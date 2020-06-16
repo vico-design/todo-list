@@ -101,8 +101,8 @@ ul li:hover .trashButton {
 .button {
   background-color: #efe5dc;
   margin-left: 10px;
-  color: #d0b8ac;
+  color: #886f68;
   border-radius: 14px;
-  border: 15px;
+  border: 2px solid #886f68;
   cursor: pointer;
 }
