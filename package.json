@@ -1,5 +1,6 @@
 {
   "name": "todo-list",
+  "homepage": "https://vico-design.github.io/todo-list/",
   "version": "1.0.0",
   "description": "ToDo list",
   "main": "index.html",
