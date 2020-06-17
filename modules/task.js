@@ -49,6 +49,6 @@ class Task {
 }
 const task1 = new Task ("Finish ToDo App", true);
 
-const task2 = new Task ("Drink 3 liter of water ");
+const task2 = new Task ("Drink 3 liter of water", false);
 const task3 = new Task ("Learn more German");
 const task4 = new Task ("Do excercise");
