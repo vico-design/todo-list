@@ -33,10 +33,25 @@ class Task {
         this.element.appendChild(this.a);
         };
     onCheck(params) {
-        this.label.className = "completed";
-        this.input.onclick = this.onUnCheck;
-        this.completed = true;
+        
+        const promiseExecutor = (resolve, reject) => {
+            this.label.className = "completed";
+            this.input.onclick = this.onUnCheck;
+            resolve("Yaestaia"); 
+        };
+
+        const myPromise = new Promise(promiseExecutor);
+        myPromise.then((message) => {
+            this.completed = true;
+            console.log(message);
+        }).finally(() => {
+            console.log("finally");
+        });
+        // myPromise.finally();
     };
+
+
+
     onDelete() {
         console.log("delete");
     };
