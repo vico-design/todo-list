@@ -1,50 +1,90 @@
 import { progressBar } from "./progressBar.js";
+import { Item } from "./task.js";
 
-/*
-FUNCIONALIDAD ADD NEW TASK 
-1) Escribir en el "text" una nueva tarea 
-2) Cuando se clickee el boton "add" agregar la tarea como un nuevo elemento <li> de la <ul>  
-3) Cuando se ponga "check" en el checkbox se completa la tarea (el texto pase a color gris y se tache)
 
-*/
+const task1 = new Item ("Finish ToDo App", true);
+const task2 = new Item ("Drink 3 liter of water", false);
+const task3 = new Item ("Learn more German", false);
+const task4 = new Item ("Do excercise", false);
+
+class List{
+  items = [];
+
+  addItem(...items){
+    this.items.push(...items);
+  };
+
+  deleteItem(item){
+    for(let i=0; i<this.items.length; i++){
+      if(this.items[i]=== item){
+        this.items.splice(i,1);
+      };
+    };
+  };
+
+  deleteList(){
+    this.items = [];
+  }
+};
+
+const list1 = new List();
+list1.addItem(task1, task2, task3,);
+const list2 = new List();
+list2.addItem(jamon, queso, huevo);
+list2.deleteItem(jamon);
+
+
+
+// const onDeleteItem = (e) => {
+//   e.preventDefault();
+//   const li = e.target.parentElement;
+//   li.remove();
+//   progressBar.removeOneMax();
+//   const checkbox = li.querySelector(".checkbox");
+//   if (checkbox.checked) {
+//     progressBar.removeOneValue();
+//   }
+
+
+
+
+
 
 const buttonAdd = document.getElementById("add");
 buttonAdd.onclick = addTask;
 
-function addTask() {
-  const inputValue = document.getElementById("text").value;
-  if (inputValue === "") {
-    alert("Please insert a text");
-  } else {
-    const li = document.createElement("li");
+};
+// function addTask() {
+  //   } else {
+    //     const li = document.createElement("li");
 
-    const checkbox = document.createElement("input");
-    checkbox.type = "checkbox";
-    checkbox.className = "checkbox";
-    checkbox.onclick = checkHandler;
+//     const checkbox = document.createElement("input");
+//     checkbox.type = "checkbox";
+//     checkbox.className = "checkbox";
+//     checkbox.onclick = checkHandler;
 
-    const labelText = document.createTextNode(inputValue);
-    const label = document.createElement("label");
-    label.appendChild(labelText);
+//     const labelText = document.createTextNode(inputValue);
+//     const label = document.createElement("label");
+//     label.appendChild(labelText);
 
-    const trashLink = document.createElement("a");
-    const trashIcon = document.createTextNode("🗑");
-    trashLink.className = "trashButton";
-    trashLink.setAttribute("href", "#");
-    trashLink.onclick = onDeleteItem;
-    trashLink.appendChild(trashIcon);
+//     const trashLink = document.createElement("a");
+//     const trashIcon = document.createTextNode("🗑");
+//     trashLink.className = "trashButton";
+//     trashLink.setAttribute("href", "#");
+//     trashLink.onclick = onDeleteItem;
+//     trashLink.appendChild(trashIcon);
 
-    li.appendChild(checkbox);
-    li.appendChild(label);
-    li.appendChild(trashLink);
+//     li.appendChild(checkbox);
+//     li.appendChild(label);
+//     li.appendChild(trashLink);
 
-    document.getElementById("list").appendChild(li);
-    progressBar.addOneMax();
+//     document.getElementById("list").appendChild(li);
+//     progressBar.addOneMax();
 
-    document.getElementById("text").value = "";
-    console.log(progressBar);
-  }
-}
+//     document.getElementById("text").value = "";
+//     console.log(progressBar);
+//   }
+// }
 
 /*
 FUNCIONALIDAD:
@@ -83,15 +123,5 @@ const onDeleteList = (e) => {
   progressBar.deleteList();
 };
 
-const onDeleteItem = (e) => {
-  e.preventDefault();
-  const li = e.target.parentElement;
-  li.remove();
-  progressBar.removeOneMax();
-  const checkbox = li.querySelector(".checkbox");
-  if (checkbox.checked) {
-    progressBar.removeOneValue();
-  }
-};
 
 export { addTask, checkHandler, onDeleteList, onDeleteItem };
