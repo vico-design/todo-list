@@ -1,7 +1,7 @@
 const { checkHandler } = require("./list");
 // Agregar nuevas tareas 
 
-class Task {
+class Item {
     constructor(text, completed){
         this.completed = completed;
         this.text = text;
@@ -61,15 +61,7 @@ class Task {
         this.completed = false;
     };
 };
-const task1 = new Task ("Finish ToDo App", true);
-const task2 = new Task ("Drink 3 liter of water", false);
-const task3 = new Task ("Learn more German", false);
-const task4 = new Task ("Do excercise", false);
+export {Item};
 
 //conocer las tareas que contiene(array de las tareas)/ agregar y borrar tareas. SIN PROGRESSBAR
 // las nuevas instancias de las tareas tienen que estar dentro de la clase List. 
-
-class List{
-    constructor
-
-}
