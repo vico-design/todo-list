@@ -10,13 +10,15 @@ const task4 = new Item ("Do excercise", false);
 class List{
   items = [];
 
-  addItem(...items){
-    this.items.push(...items);
+  addItem(...itemsToAdd){
+    // items = [task1, task2, task3]
+    this.items.push(...itemsToAdd);
+    // push(task1, task2, task3)
   };
 
-  deleteItem(item){
+  deleteItem(itemToDelete){
     for(let i=0; i<this.items.length; i++){
-      if(this.items[i]=== item){
+      if(this.items[i]=== itemToDelete){
         this.items.splice(i,1);
       };
     };
@@ -24,7 +26,7 @@ class List{
 
   deleteList(){
     this.items = [];
-  }
+  };
 };
 
 const list1 = new List();
